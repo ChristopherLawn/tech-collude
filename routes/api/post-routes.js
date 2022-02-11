@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { rearg } = require('lodash');
 const { Post, User } = require('../../models');
 
 // GET all posts
