@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
         });
 });
 
-// login route to verify user
+// POST login route to verify user
 router.post('/login', (req, res) => {
     User.findOne({
         where: {
