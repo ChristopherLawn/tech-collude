@@ -1,15 +1,10 @@
 <article class="post">
   <div class="title">
-    <a href="{{post.post_title}}" target="_blank">{{post.post_title}}</a>
+ <h2>{{post.post_title}}</h2>
+ <h3>by: {{post.user.username}} on {{format_date post.createdAt}}</h3>
+    
   </div>
-  <div class="meta">
-    by
-    {{post.user.username}}
-    on
-    {{post.created_at}}
-    |
-    <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-  </div>
+  <p class="body">{{post.post_body}}</p>
 </article>
 
 {{#if loggedIn}}

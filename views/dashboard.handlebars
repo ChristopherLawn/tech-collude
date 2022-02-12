@@ -1,0 +1,9 @@
+<h1>my posts</h1>
+
+<a href="/dashboard/new">Create new post</a>
+
+<div class="userPosts">
+{{#each posts}}
+  <a href="/dashboard/edit/{{id}}">{{post_title}}</a>
+{{/each}}
+</div>
