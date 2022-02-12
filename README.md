@@ -13,7 +13,7 @@ An engaging tech blog site where users can create posts, leave comments on posts
 
 ## **Screenshots**
 ![TechCollude sample screenshot](./assets/tech-collude-homepage.jpg)
-![TechCollude sample screenshot](./assets/tech-collude-post-view.jpg)
+![TechCollude sample screenshot](./assets/tech-collude-post-view.JPG)
 
 ## **Programs**
 * bcrypt
