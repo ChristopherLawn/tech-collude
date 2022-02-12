@@ -10,16 +10,17 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>
-          <a href="/">TechCollude</a>
-        </h1>
+        {{#if loggedIn}}
+
         <nav>
-          <a href="/">homepage</a>
-          {{#if loggedIn}}
-          <a href="/dashboard">dashboard</a>
-          <button id="logout" class="btn-no-style">logout</button>
+          
+          {{!-- <a href="/">Homepage</a> --}}
+          <a href="/">HOMEPAGE</a>
+          <a href="/dashboard">DASHBOARD</a>
+          <button id="logout" class="btn-no-style">LOGOUT</button>
           {{else}}
-          <a href="/login">login</a>
+          <a class="home-nav page-title" href="/">TechCollude</a>
+          <a class="home-nav" href="/login">LOGIN</a>
           {{/if}}
         </nav>
       </header>

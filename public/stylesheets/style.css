@@ -6,14 +6,15 @@ body, html {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
   color: #333;
 }
 
 a {
   text-decoration: none;
   color: #225ca3;
-  font-weight: bold;
+  /* font-weight: bold; */
   transition: color .1s;
 }
 
@@ -77,13 +78,27 @@ form label {
 header {
   border-bottom: 1px solid #ccc;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0 1%;
 }
 
 header h1 {
-  font-size: 1em;
+  font-size: 1.5em;
+}
+
+nav a {
+  /* justify-content: center; */
+  padding: 0 20px 0 20px;
+  font-size: 1.5em;
+}
+
+.home-nav {
+  font-size: 1.5em;
+}
+
+.page-title {
+  font-size: 2em;
 }
 
 main {
@@ -98,7 +113,8 @@ main {
   cursor: pointer;
   text-decoration: none;
   color: #225ca3;
-  font-size: 100%;
+  font-size: 1.5em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
   transition: color .1s;
   margin-left: 16px;
@@ -109,11 +125,11 @@ main {
   color: #3486eb;
 }
 
-.delete-post-btn {
+#delete {
   background-color: #d41414;
 }
 
-.delete-post-btn:hover {
+#delete:hover {
   background-color: #ff643d;
 }
 
@@ -131,15 +147,6 @@ main {
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
-}
-
-.upvote-btn {
-  background-color: #197d0f;
-  transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
 }
 
 .comment-form {
@@ -175,4 +182,26 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+
+.card {
+  background-color: lightcyan;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.add-post {
+  font-size: 2em;
+}
+
+@media screen and (max-width: 420px) {
+  nav a {
+    /* justify-content: center; */
+    padding: 0 20px 0 20px;
+    font-size: 1em;
+  }
+
+  .btn-no-style {
+    font-size: 1em;
+  }
 }

@@ -6,7 +6,10 @@ router.get('/', withAuth, (req, res) => {
    Post.findAll({
        where:{
            user_id: req.session.user_id
-       }
+       },
+       order: [
+           ['id', 'DESC']
+       ]
    })
    .then(dbPostData => {
     // pass a single post object into the homepage template

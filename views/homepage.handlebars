@@ -1,7 +1,8 @@
+<h1>TechCollude</h1>
 <ol class="post-list">
   {{#each posts as |post|}}
-  <li>
-    <article class="post">
+  {{!-- <li> --}}
+    <article class="card">
       <div class="title">
         <a href="/post/{{id}}">{{post.post_title}}</a>
       </div>
@@ -11,6 +12,6 @@
        
       </div>
     </article>
-  </li>
+  {{!-- </li> --}}
   {{/each}}
-</ol>
+</ul>

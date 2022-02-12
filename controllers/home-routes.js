@@ -6,6 +6,9 @@ const withAuth = require('../utils/auth');
 router.get('/', (req, res) => {
     console.log(req.session);
     Post.findAll({
+        order: [
+            ['id', 'DESC']
+        ],
         include: [User]
     })
         .then(dbPostData => {
@@ -41,6 +44,7 @@ router.get('/post/:id', withAuth, (req, res) => {
         include: [User,
             {
                 model: Comment,
+                // order: ['id', 'DESC'],
                 include: [User]
             },
 
