@@ -57,6 +57,9 @@ router.get('/post/:id', withAuth, (req, res) => {
                 include: [User]
             },
 
+        ],
+        order: [
+            [Comment, "id", "DESC"]
         ]
     })
         .then(dbPostData => {
