@@ -12,7 +12,7 @@ Post.init(
             allowNull: false
         },
         post_body: {
-            type: DataTypes.STRING(10000),
+            type: DataTypes.TEXT,
             allowNull: false
         },
 

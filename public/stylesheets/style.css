@@ -9,21 +9,22 @@ body, html {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bolder;
   color: #333;
+  background-color: lightyellow;
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: green;
   /* font-weight: bold; */
   transition: color .1s;
 }
 
 a:hover {
-  color: #3486eb;
+  color: pink;
 }
 
 button {
-  background-color: #225ca3;
+  background-color: green;
   border: 0;
   padding: 1%;
   color: white;
@@ -34,7 +35,7 @@ button {
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: pink;
 }
 
 .post-list {
@@ -112,7 +113,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: green;
   font-size: 1.5em;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
@@ -122,7 +123,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: pink;
 }
 
 #delete {
@@ -136,6 +137,7 @@ main {
 .post {
   margin-bottom: 2%;
   line-height: 150%;
+  color: darkslategray;
 }
 
 .post .title span {

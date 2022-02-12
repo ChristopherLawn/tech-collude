@@ -11,25 +11,20 @@
     <div class="wrapper">
       <header>
         {{#if loggedIn}}
-
         <nav>
-          
-          {{!-- <a href="/">Homepage</a> --}}
           <a href="/">HOMEPAGE</a>
           <a href="/dashboard">DASHBOARD</a>
           <button id="logout" class="btn-no-style">LOGOUT</button>
           {{else}}
           <a class="home-nav page-title" href="/">TechCollude</a>
           <a class="home-nav" href="/login">LOGIN</a>
+          <a class="home-nav" href="/signup">SIGN UP</a>
           {{/if}}
         </nav>
       </header>
       <main>
         {{{body}}}
       </main>
-      <footer>
-        Thanks for visiting!
-      </footer>
     </div>
     
     {{#if loggedIn}}
