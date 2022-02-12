@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// GET find all posts and display them on the homepage 
 router.get('/', (req, res) => {
     console.log(req.session);
     Post.findAll({
@@ -12,7 +13,6 @@ router.get('/', (req, res) => {
         include: [User]
     })
         .then(dbPostData => {
-            // pass a single post object into the homepage template
             const posts = dbPostData.map(post => post.get({ plain: true }));
             console.log(posts)
             res.render('homepage', {
@@ -26,6 +26,7 @@ router.get('/', (req, res) => {
         });
 });
 
+// If the user tried to go to '/login' while logged in, redirect them to the homepage
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -35,6 +36,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+// If the user tries to go to '/signup' while logged in, redirect them to the homepage
 router.get('/signup', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -44,6 +46,7 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+// GET view a post based on ID and see comments on that post
 router.get('/post/:id', withAuth, (req, res) => {
     Post.findOne({
         where: {

@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post } = require('../models');
 const withAuth = require('../utils/auth');
 
+// GET find all of the logged in user's posts
 router.get('/', withAuth, (req, res) => {
    Post.findAll({
        where:{
@@ -32,6 +33,7 @@ router.get('/new', withAuth, (req, res) => {
     })
 })
 
+// GET find post by ID to edit it
 router.get('/edit/:id', withAuth, (req, res) => {
     Post.findByPk(req.params.id)
     .then(dbPostData => {

@@ -6,11 +6,9 @@ const withAuth = require('../../utils/auth');
 
 // POST new comment
 router.post('/', withAuth, (req, res) => {
-    // check the session
     if (req.session) {
         Comment.create({
              ...req.body,
-            // use the id from the session
             user_id: req.session.user_id
         })
             .then(dbCommentData => res.json(dbCommentData))
